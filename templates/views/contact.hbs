@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="contact_style.css" />
+
+
+    <title>Contact</title>
+
+</head>
+<body>
+  <div class="mobile_menu">
+      <div class="mobile_nav_bar">
+        <a class="mobile_nav_item" href="/">Home</a>
+        <a class="mobile_nav_item" href="/project">Projects</a>
+        <a class="mobile_nav_item" href="/contact">Contact</a>
+        <a class="mobile_nav_item" href="/about">About</a>
+        <ion-icon class="mobile_menu_icon" name="close-outline"></ion-icon>
+      </div>
+    </div>
+
+    <section class="section-navbar">
+        <div>
+            <nav class="nav_body">
+                <p class="logo">< <span>/</span> Developer ></p>
+                <p></p>
+                <div class="nav_bar">
+                  <a class="nav_item" href="/">Home</a>
+                  <a class="nav_item" href="/project">Project</a>
+                  <a class="nav_item" href="/about">About</a>
+                  <div class="menu">
+                    {{!-- <img src="../../images/profile_1.jpg" alt="Profile photo" class="menu_image"> --}}
+                    <ion-icon class="menu_svg" name="menu-outline"></ion-icon>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </section>
+    
+    <section class="section_tagline">
+
+      <div class="form_container">
+        <h1 class="tagline">Let's have a Talk</h1>
+
+        <form class="form" method="POST" action="/contact">
+          <div class="form_content input__content">
+            <input class="form_input" type="text" id="name" name="user_name" required>   
+            <label class="form_label" for="name">Your Name*</label>
+          </div>
+          <div class="form_content input__content">
+            <input class="form_input" type="text" id="name" name="user_email" required>   
+            <label class="form_label" for="name">Your Email*</label>
+          </div>
+          <div class="form_content">
+            <label class="form_label" for="name">Your Thought*</label>
+            <textarea class="form_textarea" rows="3" name="text_area" required></textarea>   
+          </div>
+          <input type="submit" value="Submit" name="submit" class="submit_btn" onclick="openPopup()">
+        </form>
+
+      </div>
+    </section>
+
+    <section class="section_contact_contaner">
+        <div class="contact_contaner">
+            
+            <div class="meetus_contaner">
+              <div class="meetup_contant">
+                <h1 class="meet_heading">Meet us</h1>
+                <div class="about_contact">
+                  <a href="tel:9079581918">+91 9079581918</a>
+                </div>
+                <div class="about_contact">
+                  <a href="mailto:sshivam3765@gmail.com">sshivam3765@gmail.com</a>
+                </div>
+                <div class="about_contact">
+                  <a href="https://www.linkedin.com/in/shivam-chaudhary-284787227/" target="_blank">shivam_chaudhary@linkedin</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="pitchus_contaner">
+              <div class="pitchus_contant">
+
+                <h1 class="pitch_header">Pitch us</h1>
+                <p class="hello">Hello.</p>
+                <br>
+                <p>My name is SHIVAM CHAUDHARY  and my e-mail is <a class="email" href="#">sshivam3765@gmail.com</a> and i would like to discuss about portfolio</p>
+
+                <a href="/about"><button class="send_btn">Read</button></a>
+              </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    
+    <script>
+      const countClick = 0
+      const menuBtn = document.querySelector('.menu_svg')
+      const menuCloseBtn = document.querySelector('.mobile_menu_icon')
+      const moileNav = document.querySelector('.mobile_menu')
+
+      menuBtn.addEventListener('click', function () {
+          moileNav.style.display = 'flex';
+          if (moileNav.style.display = 'flex') {
+              document.body.style.overflowY = 'hidden'
+          } 
+          })
+          
+          menuCloseBtn.addEventListener('click', function () {
+              moileNav.style.display = 'none';
+              document.body.style.overflowY = 'scroll'
+      })
+
+
+
+      // ------------  Form Validataion  ---------------
+      const inputes = document.querySelectorAll('.form_input')
+      const inputestext = document.querySelector('.form_textarea')
+      const submitBtn = document.querySelector('.submit_btn')
+
+      //------------------  Alart Message Start ------------------------
+      class AddHTML {
+
+        constructor(t, message) {
+          this._alertContent(t, message);
+          new AlertBox();
+        }
+
+        _alertContent(t, message) {
+          const type = t === "SUCCESS" ? "success" : "error";
+          const html = `
+              <div class="alert ${type}">
+                <p class="alert__text">${message}</p>
+                <span class="alert__close_btn">&times;</span>
+              </div>
+              `;
+
+          document.body.insertAdjacentHTML("afterbegin", html);
+        }
+      }
+
+      class AlertBox {
+        #closeBtn = document.querySelector(".alert__close_btn");
+        constructor() {
+          this.#closeBtn.addEventListener("click", this._closebtn);
+          setTimeout(()=>{this._closebtn()},3000);
+        }
+        _closebtn() {
+          const box = document.querySelector(".alert");
+          box.remove();
+        }
+        
+      }
+
+
+
+
+      function openPopup(){
+        let x = 0;
+        inputes.forEach(i => {if(i.value < 3 ) x++})
+        if(inputestext.value < 3) x++;
+        if(!inputes[1].value.includes('@')) x++;
+        if(x > 0 ){
+        new AddHTML('ERROR', 'Some missing Field...!!')
+        } else{
+        new AddHTML('SUCCESS', 'Successfully Submitted...!!')
+        }
+      }
+
+      submitBtn.addEventListener('submit', openPopup)
+      
+
+//---------------------  Alart Message End  -------------------------
+
+    
+    </script>
+</body>   
+</html>

@@ -1,0 +1,257 @@
+/* #ff6b35 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.main_container{
+    width: 100%;
+    margin: 2rem 0;
+    /* height: 100%; */
+    position: relative;
+
+}
+.empty{
+    background-color: #ff6b35;
+    height: 100rem;
+    width: 40rem;
+    position: relative;
+    margin-left: 10rem;
+}
+.photo{
+    height: 48rem;
+    width: 48rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Sestion Details */
+.about_us{
+    height: 40rem;
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: #002233;
+    align-self: flex-end;
+    margin-right: 10rem;
+}
+.about_heading{
+    border-bottom: .1rem solid #b9375e;
+    /* font-family: 'Merienda', cursive; */
+    font-family: 'Merienda', cursive;
+    font-size: 4rem;
+    
+}
+.container_details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    gap: 18rem;
+    font-family: 'Merienda', cursive;
+
+}
+.buttons{
+    display: flex;
+    gap: 4rem;
+}
+button{
+    width: 12rem;
+    height: 4rem;
+    border-radius: .4rem;
+    border: none;
+    font-family: inherit;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background-color: #fff;
+    position: relative;
+    border-radius: 0;
+    transition: all .4s .3s ease-in-out;
+    font-family: 'Merienda', cursive;
+
+}
+button:hover{
+    background-color:#b9375e;
+    border-radius: 2px;
+    color: #ccf2ff;
+}
+
+
+
+button::after, button::before{
+    content: "";
+    display: inline-block;
+    height: 40%;
+    width: 20%;
+    position: absolute;
+    transition: all .5s;
+    
+}
+button::before{
+    left: 0;
+    top: 0;
+    border-left: .1rem solid #b9375e;
+    border-top: .1rem solid #b9375e;
+}
+button::after{
+    border-right: .1rem solid #b9375e;
+    border-bottom: .1rem solid #b9375e;
+    right: 0;
+    bottom: 0;
+}
+button:hover::before,button:hover::after{
+    height: 98%;
+    width: 99.5%;
+    border-radius: 2px;    
+}
+
+/* Informaions cards */
+.information{
+    width: 90%;
+    display: flex;
+    gap: 4rem;
+    padding: 0 1rem;
+}
+.info_1,
+.info_2,
+.info_3{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 1.2rem 2rem 1.2rem;
+    border-radius: 1.2rem;
+    font-size: 1.8rem;
+    color: #002233;
+    padding: 6rem 2rem;
+}
+.info_1{
+    background-color: #b9375e;
+}
+.info_2{
+    background-color: #ccf2ff;
+}
+.info_3{
+    background-color: #ff6b35;
+}
+.info:hover{
+    transform: scale(1.02);
+}
+
+
+
+
+/* ----------  Media Querry   --------------- */
+
+
+/* ------- width = 1600px  ---------- */
+@media (min-width:100em){
+    .about_us{
+        margin-right: 25rem;
+    }
+    .empty{
+        width: 60rem;
+        height: 120rem;
+    }
+    .photo{
+        width: 68rem;
+        height: 68rem;
+    }
+    .container_details{
+        gap: 35rem;
+    }
+}
+
+
+/* ------- width = 1100px  ---------- */
+@media (max-width:68.75em){
+    .empty{
+        width: 25rem;
+        height: 115rem;
+    }
+    .photo{
+        width: 32rem;
+        height: 32rem;
+    }
+    .about_us{
+        margin: 0;
+    }
+}
+
+
+/* ------- width = 850px  ---------- */
+@media (max-width:53.125em){
+    html{
+        font-size: 45%;
+    }
+    .information{
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .container_details{
+        gap: 0rem;
+    
+    }
+    .about_us{
+        margin-right: 4rem;
+    }
+    .empty{
+        height: 140rem;
+    }
+}
+
+
+/* ------- width = 600px  ---------- */
+@media (max-width:37.5em){
+    .container_details{
+        top: 25%;
+    }
+    .about_us{
+        align-self: center;
+        align-items: center;
+        margin: 0;
+    }
+    .empty{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        height: 190rem;
+    }
+    
+}
+
+/* ----- width = 420px  ----- */
+@media(max-width:26.25){
+    .empty{
+        height: 150rem;
+    }
+}

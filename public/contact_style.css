@@ -1,0 +1,450 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Stick+No+Bills:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-color: #9B0041;
+    position: relative;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* ------  Popup section  ---------- */
+
+.popup{
+    width: 30%;
+    height: 40vh;
+    background-color: #fff;
+    position: absolute;
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap: 1rem;
+    left: 50%;
+    z-index: 1;
+    font-size: 2rem;
+    padding: 0 2rem;
+    font-family: 'Merienda', cursive;
+    color: #002233;
+    top: -3rem;
+    visibility: hidden;
+    transform: translate(-50%,-50%) scale(0.1);
+    transition: transform .4s, top .4s;
+}
+.open_popup{
+    transform: translate(-50%,-50%) scale(1);
+    top: 50%;
+    visibility: visible;
+
+}
+.popup_icon{
+    width: 7rem;
+    height: 7rem;
+    color: #27c93f;
+    
+}
+.popup_btn{
+    width: 6rem;
+    height: 2.5rem;
+    border: 0;
+    outline: none;
+    background-color: #9B0041;
+    cursor: pointer;
+    border-radius: .8rem;
+    color: #ccf2ff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* *********  NAV-BAR SECTION ************* */
+
+.nav_body{
+    background-color: #002233;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 8rem;
+    transition: 1s ease-in-out;
+    font-family: 'Merienda', cursive;
+
+}
+.nav_bar{
+    color: #e86e59;
+    display: flex;
+    gap: 3.5rem;
+}
+.nav_item:link, .nav_item:visited{
+    font-size: 3rem;
+    color: #9B0041;
+    text-decoration: none;
+}
+.nav_item:hover{
+    color: #fcd0a1;
+    transition: .3s ease-in-out;
+}
+.logo{
+    color: #9B0041;
+    font-size: 3rem;
+    cursor: context-menu;
+}
+.slash{
+    color: #9B0041;
+}
+
+
+
+/* ***********  FORM SECTION   *********** */
+
+.section_tagline{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 4rem 0;
+}
+.tagline{
+    font-size: 4rem;
+    border-bottom: .2rem solid ;
+    margin-top: 1rem;
+    color: #002233;
+    font-family: 'Merienda', cursive;
+
+}
+.form_container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 40vw;
+    padding: 3rem 0;
+    box-shadow: rgb(0, 0, 0, 0.3) 0px 19px 38px, rgb(0, 0, 0, 0.22) 0px 15px 12px;
+    justify-content: center;
+    position: absolute;
+    border-radius: .2rem;
+}
+.form_content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 100%;
+    color:#fcd0a1;
+    position: relative;
+    gap: 1rem;
+    
+}
+.form{
+    font-family: 'Kaushan Script', cursive;
+    width: 80%;
+    height: 100%;
+
+}
+.form_label{
+    height: 100%;
+    font-size: 2rem;
+}
+.form_input{
+    height: 100%;
+    border: none;
+    outline: none;
+    border-bottom: .2rem solid #fcd0a1;
+    padding: .3rem .5rem;
+    font-size: 2.2rem;
+    border-radius: .3rem;
+    font-family: 'Playfair Display', serif;
+    background: transparent;
+    color: #e0fbfc;
+
+}
+
+.form_textarea{
+    border: .2rem solid #fcd0a1;
+    border-radius: .3rem;
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: 2rem;
+    color: #e0fbfc;
+    resize: none;
+    padding: .8rem;
+}
+.form_textarea::-webkit-scrollbar{
+    display: none;
+}
+.submit_btn{
+    height: 3rem;
+    width: 9rem;
+    margin-left: 1rem;
+    border: none;
+    border-radius: .8rem;
+    background-color:#e0fbfc;
+    color:#9B0041;
+    font-family: inherit;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+
+/* **********   CONTACT SECTION  ************ */
+
+.contact_contaner{
+    display: flex;
+    position: relative;
+    top: 0rem;
+    width: 100vw;
+}
+.meetus_contaner{
+    background-color: #ccf2ff;
+    width: 50%;
+    display: flex;
+    /* line-height: 3rem; */
+}
+.meetup_contant{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+.meet_heading{
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    color: #002233;
+    font-family: 'Kaushan Script', cursive;
+
+}
+.about_contact{
+    color: #e0fbfc;
+}
+.about_contact  a:link, a:visited{
+    color: #002233;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Cinzel Decorative', cursive;
+
+}
+.pitchus_contaner{
+    background-color: #fcd0a1fc;
+    position: relative;
+    width: 50%;
+}
+.pitchus_contant{
+    margin: .4rem 2rem ;
+    color: #002233;
+    font-size: 1.5rem;
+    font-family: 'Cinzel Decorative', cursive;
+
+}
+.pitch_header{
+    font-size: 3rem;
+    font-family: inherit;
+    color: #002233;
+    font-family: 'Kaushan Script', cursive;
+
+}
+.hello{
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    text-decoration: underline;
+    font-family: 'Kaushan Script', cursive;
+}
+.send_btn{
+    width: 7rem;
+    height: 2.5rem;
+    cursor: pointer;
+    text-align: center;
+    background-color: #9B0041;
+    color: #e0fbfc;
+    border: none;
+    border-radius: .8rem;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.8rem;
+    margin: 1.8rem .8rem;    
+}
+
+.email:visited,
+.email:link{
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #002233;
+}
+
+
+/* -----------   MObile-menu  ----------- */
+
+.menu{
+    display: flex;
+    gap: 2REM;
+    display: none;
+    margin-right: -2rem;
+}
+.menu_svg{
+    height: 4rem;
+    width: 4rem;
+    color: #9B0041;
+}
+.menu_image{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: none;
+}
+
+.mobile_menu{
+    width: 40vw;
+    height: 100vh;
+    background-color: #002233;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 6;
+    padding: 7rem 2rem;
+    display: none;
+
+}
+
+.mobile_nav_bar{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.mobile_nav_item:link, .mobile_nav_item:visited{
+    color: #e0fbfc;
+
+}
+.mobile_menu_icon{
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    right: 1rem;
+    top: -.3rem;
+    padding: 2rem;
+    color: #9B0041;
+
+}
+
+/* ------------  Media querry  --------------- */
+
+@media (max-width:56.25em){
+    .nav_item{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+}
+
+@media (max-width:50em) {
+    .form_container{
+        font-size: 1rem;
+        width: 80vw;
+        gap: 3rem;
+    }
+    .nav_body{
+        padding: 0 2.4rem 0 1rem;
+    }
+    .contact_contaner{
+        flex-direction: column;
+        margin-top: 4rem ;
+    }
+    .meetus_contaner{
+        width: 100%;
+        
+    }
+    .pitchus_contaner{
+        width: 100%;
+    }
+}
+
+@media (max-width:18.75em){
+    html{
+        font-size: 50%;
+    }
+    .contact_contaner{
+        font-size: 1rem;
+    }
+    .tagline{
+        font-size: 3rem;
+    }
+}
+
+.input__content .form_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .8s;
+}
+.form_input:valid  + .form_label , .form_input:focus  + .form_label {
+    top: -30px
+}
+.input__content{
+    margin-top: 4rem;
+}
+
+
+  /* ALERT BOX DESIGN START*****************************************/
+   .alert {
+    font-size: 1.6rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .alert__text {
+    display: inline-block;
+    pointer-events: none;
+    letter-spacing: 1px;
+    color: #002233;
+  }
+  .alert__close_btn {
+    cursor: pointer;
+    margin-left: 1rem;
+    font-weight: 900;
+  }
+  
+  .success {
+    background-color: rgb(72, 202, 228, 0.9);
+    border: 2px solid #48cae4;
+    box-shadow: 0 0 2rem #48cae4;
+  }
+  
+  .error {
+    /* background-color: rgb(231, 29, 54, 0.6);
+    border: 2px solid #e71d36;
+    box-shadow: 0 0 2rem #e71d36; */
+    background-color: rgba(255, 185, 8, 0.942);
+    border: 2px solid #ffba08;
+    box-shadow: 0 0 2rem #ffba08;
+  } 
+  /* ALERT BOX DESIGN END********************************************** */
+  
