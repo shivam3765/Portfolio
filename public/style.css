@@ -356,6 +356,16 @@ a:visited{
 .heading_edu{
     color: #e0fbfc;
     text-align: center;
+
+    /* background: linear-gradient(
+        45deg, #4158D0 0%, #C850C0 50%, #FFCC70 100% 
+    );
+    color: black;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 6px transparent;
+    color: inherit; */
+
 }
 .heading_edu h1{
     font-size: 4rem;
