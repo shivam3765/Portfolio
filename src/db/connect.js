@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-mongoose.connect("mongodb+srv://vampi:Ss9079581918@shivam.wltfrhp.mongodb.net/userConnectToMe", {
+const database_str = "mongodb+srv://vampi:Ss9079581918@shivam.wltfrhp.mongodb.net/userConnectToMe"
+mongoose.connect(database_str, {
     // useNewUrlParser: true,
     // useUnifiedTopology: true,
     // useCreateIndex: true
