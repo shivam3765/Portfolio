@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const database_str = "mongodb+srv://vampi:Ss9079581918@shivam.wltfrhp.mongodb.net/userConnectToMe"
+const database_str = process.env.DATABASE_KEY
 mongoose.connect(database_str, {
     // useNewUrlParser: true,
     // useUnifiedTopology: true,

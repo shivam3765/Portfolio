@@ -1,5 +1,6 @@
 *package-lock.json
 *index.html
+.env
 /.vscode/*
 /icons/*
 /images/*
