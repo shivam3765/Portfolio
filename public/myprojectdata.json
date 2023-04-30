@@ -1,0 +1,26 @@
+[
+    {
+    "image" : "images/proj-1.jpg",
+    "text" : "This project is based on Ecommerce site project To buy clothe's.",
+    "link" : "https://github.com/shivam3765?tab=repositories"
+    },
+
+    {
+    "image" : "images/proj-2.jpg",
+    "text" : "This project is based on musicplayer To paly your playlist's.",
+    "link" : "https://github.com/shivam3765?tab=repositories"
+    },
+
+    {
+    "image" : "images/proj-3.jpg",
+    "text" : "This project is based on ToDo list To write your todo list's.",
+    "link" : "https://github.com/shivam3765?tab=repositories"
+    },
+
+    {
+    "image" : "images/proj-4.png",
+    "text" : "This project is based on current time To check time of different country's.",
+    "link" : "https://github.com/shivam3765?tab=repositories"
+    }
+    
+]
