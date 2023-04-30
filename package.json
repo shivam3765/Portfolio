@@ -2,7 +2,8 @@
   "scripts": {
     "text": "echo \"Error: no text specified\" && exit 1",
     "shiv": "nodemon src/app -e js,hbs,css",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "build": "npm i"
   },
   "dependencies": {
     "build": "^0.1.4",
