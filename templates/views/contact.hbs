@@ -12,31 +12,13 @@
 
 </head>
 <body>
-  <div class="mobile_menu">
-      <div class="mobile_nav_bar">
-        <a class="mobile_nav_item" href="/">Home</a>
-        <a class="mobile_nav_item" href="/project">Projects</a>
-        <a class="mobile_nav_item" href="/contact">Contact</a>
-        <a class="mobile_nav_item" href="/about">About</a>
-        <ion-icon class="mobile_menu_icon" name="close-outline"></ion-icon>
-      </div>
-    </div>
 
     <section class="section-navbar">
         <div>
             <nav class="nav_body">
-                <p class="logo">< <span>/</span> Developer ></p>
-                <p></p>
-                <div class="nav_bar">
-                  <a class="nav_item" href="/">Home</a>
-                  <a class="nav_item" href="/project">Project</a>
-                  <a class="nav_item" href="/about">About</a>
-                  <div class="menu">
-                    {{!-- <img src="../../images/profile_1.jpg" alt="Profile photo" class="menu_image"> --}}
-                    <ion-icon class="menu_svg" name="menu-outline"></ion-icon>
-                  </div>
-                </div>
-              </nav>
+                <a href="/"><p class="logo">< <span>/</span> Developer ></p></a>
+               
+            </nav>
         </div>
     </section>
     
@@ -88,7 +70,7 @@
                 <h1 class="pitch_header">Pitch us</h1>
                 <p class="hello">Hello.</p>
                 <br>
-                <p>My name is SHIVAM CHAUDHARY  and my e-mail is <a class="email" href="#">sshivam3765@gmail.com</a> and i would like to discuss about portfolio</p>
+                <p>My name is SHIVAM CHAUDHARY  and my e-mail is <a class="email" href="#">sshivam3765@gmail.com</a> and i would like to discuss about.</p>
 
                 <a href="/about"><button class="send_btn">Read</button></a>
               </div>
@@ -109,23 +91,6 @@
     ></script>
     
     <script>
-      const countClick = 0
-      const menuBtn = document.querySelector('.menu_svg')
-      const menuCloseBtn = document.querySelector('.mobile_menu_icon')
-      const moileNav = document.querySelector('.mobile_menu')
-
-      menuBtn.addEventListener('click', function () {
-          moileNav.style.display = 'flex';
-          if (moileNav.style.display = 'flex') {
-              document.body.style.overflowY = 'hidden'
-          } 
-          })
-          
-          menuCloseBtn.addEventListener('click', function () {
-              moileNav.style.display = 'none';
-              document.body.style.overflowY = 'scroll'
-      })
-
 
 
       // ------------  Form Validataion  ---------------

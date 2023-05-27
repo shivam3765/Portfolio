@@ -31,7 +31,7 @@ app.use(express.static(static_path));
 
 // ------- here set path views index file  ---------
 app.set("view engine", "hbs");
-app.set("views", template_path);
+app.set("views", template_path);    
 
 
 

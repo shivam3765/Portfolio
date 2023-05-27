@@ -95,7 +95,7 @@ body::-webkit-scrollbar{
     display: flex;
     gap: 3.5rem;
 }
-.nav_item:link, .nav_item:visited{
+.nav_bar a:link, .nav_bar a:visited{
     font-size: 3rem;
     color: #9B0041;
     text-decoration: none;
@@ -384,7 +384,7 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width:18.75em){
+@media (max-width:25em){
     html{
         font-size: 50%;
     }
